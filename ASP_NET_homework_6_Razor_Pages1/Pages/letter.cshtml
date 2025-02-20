@@ -1,0 +1,8 @@
+﻿@page
+@model ASP_NET_homework_6_Razor_Pages1.Pages.letterModel
+@{
+	Random rnd = new Random();
+}
+<h1>Random letter of English alphabet: 
+	<label style="background-color: seagreen; padding: 5px; color: white; font-family: sans-serif; border-radius: 3px;">@Convert.ToChar(rnd.Next(0, 25) + 65).ToString()</label>
+</h1>

@@ -1,0 +1,42 @@
+﻿@page
+@model ASP_NET_homework_6_Razor_Pages1.Pages.IndexModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        a {
+            color: #aaaa; /* White text for links */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 15px; /* Add some padding */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+
+            a:hover {
+                background-color: #1e1e1e; /* Darker background on hover */
+                color: #ffcc00; /* Change text color on hover */
+            }
+
+            a:focus {
+                outline: 2px solid #ffcc00; /* Outline for accessibility */
+                outline-offset: 2px; /* Space between outline and element */
+            }
+    </style>
+    <link href="/Pages/CSS/styles.css" rel="stylesheet" />
+</head>
+<body>
+    </br>
+    <a href="/letter">Letters</a>
+    <a href="/restaurant">Restaurant</a>
+    <a href="/random">Random restaurant</a>
+    <a href="/countries">Information about some countries</a>
+    </br>
+    </br>
+    </br>
+    <h1>Current date of the Year is: @DateTime.Now.DayOfYear</h1>
+</body>
+</html>

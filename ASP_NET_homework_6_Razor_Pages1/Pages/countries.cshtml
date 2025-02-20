@@ -1,0 +1,69 @@
+﻿@page
+@model ASP_NET_homework_6_Razor_Pages1.Pages.countriesModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .info {
+            margin: 15px 0;
+            font-size: 18px;
+            color: #555;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #999;
+        }        
+
+    </style>
+</head>
+<body>
+    @foreach (var country in Model.countries)
+    {
+        <div class="top_container">
+            <div class="container">
+                <h1>@country.Name</h1>
+                <div class="info">
+                    <strong>Area:</strong> @country.Area km²
+                </div>
+                <div class="info">
+                    <strong>Population:</strong> @country.Population
+                </div>
+            </div>
+        </div>
+    }
+    <div class="footer">
+        &copy; 2023 Country Information
+    </div>
+
+</body>
+</html>
